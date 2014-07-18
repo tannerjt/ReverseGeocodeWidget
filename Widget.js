@@ -46,6 +46,7 @@ function(declare, BaseWidget, lang, Locator, webMercatorUtils) {
             this.status.innerHTML = "Finding Address...";
             this.locator.locationToAddress(webMercatorUtils.webMercatorToGeographic(evt.mapPoint), 100, null, lang.hitch(this, function () {
                 this.status.innerHTML = "Address Error - Not Found";
+                this.geoResult.innerHTML = "";
                 this.status.setAttribute('class', 'error');
             }));            
         }));
