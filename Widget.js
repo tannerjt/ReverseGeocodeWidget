@@ -11,16 +11,24 @@ function(declare, BaseWidget, lang, Locator, webMercatorUtils) {
   return declare([BaseWidget], {
     // Custom widget code goes here 
 	
-    baseClass: 'jimu-widget-reversegeocode',
+    baseClass : 'jimu-widget-reversegeocode',
 
-    locator: undefined,
+    locator : undefined,
 
     //Change this for your own geocoder if needed
-    serviceURL : "http://navigator.state.or.us/arcgis/rest/services/Locators/gc_Composite/GeocodeServer"
+    serviceURL : "http://navigator.state.or.us/arcgis/rest/services/Locators/gc_Composite/GeocodeServer",
 
     startup : function () {
         this.inherited(arguments);
         this._initGeocoder();
+    },
+
+    onOpen : function () {
+        this._registerMapEvents();
+    },
+
+    onClose : function () {
+        this._unregisterMapEvents();
     },
 
     _initGeocoder : function () {
@@ -35,14 +43,17 @@ function(declare, BaseWidget, lang, Locator, webMercatorUtils) {
     },
 
     _registerMapEvents : function () {
-        this.map.graphics.clear();
-        this.map.on("click", lang.hitch(this, function (evt) {
+        this.mapClickEvent =  this.map.on("click", lang.hitch(this, function (evt) {
             this.status.innerHTML = "Finding Address...";
             this.locator.locationToAddress(webMercatorUtils.webMercatorToGeographic(evt.mapPoint), 100, null, lang.hitch(this, function () {
                 this.status.innerHTML = "Address Error - Not Found";
                 this.status.setAttribute('class', 'error');
             }));            
         }));
+    },
+
+    _unregisterMapEvents : function () {
+        this.mapClickEvent.remove();
     }
     
     //this property is set by the framework when widget is loaded.
