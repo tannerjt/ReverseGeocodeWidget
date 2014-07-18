@@ -1,0 +1,7 @@
+.jimu-widget-reversegeocode .success {
+	color : green;
+}
+
+.jimu-widget-reversegeocode .error {
+	color : red;
+}
