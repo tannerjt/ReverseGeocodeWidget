@@ -39,7 +39,6 @@ function(declare, BaseWidget, lang, Locator, webMercatorUtils) {
             this.status.innerHTML = "Address Found";
             this.status.setAttribute('class', 'success')
         }));
-        this._registerMapEvents();
     },
 
     _registerMapEvents : function () {
