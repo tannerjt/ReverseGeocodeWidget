@@ -51,7 +51,7 @@ define([
     portalUtils) {
     return declare([BaseWidgetSetting, _WidgetsInTemplateMixin], {
       //these two properties is defined in the BaseWidget
-      baseClass: 'jimu-widget-geocoder-setting',
+      baseClass: 'jimu-widget-reversegeocode-setting',
       defaultGeocodeUrl: "geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer",
       edit: null,
       popup: null,

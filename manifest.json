@@ -1,6 +1,5 @@
 {
   "name": "ReverseGeocode",
-  "2D":"true",
   "platform": "HTML",
   "version": "0.0.1",
   "author": "Joshua Tanner",
