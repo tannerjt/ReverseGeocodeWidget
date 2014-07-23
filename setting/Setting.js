@@ -52,10 +52,8 @@ define([
 
       //When user click's 'OK'
       getConfig: function() {
-        console.log('Get config');
-        this.serviceUrl.value = this.config.reversegeocode.serviceUrl;
-        //this.config.reversegeocode.serviceUrl = this.serviceUrl.value;
-        //return this.config;
+        this.config.reversegeocode.serviceUrl = this.serviceUrl.value;
+        return this.config;
       }
 
     });
