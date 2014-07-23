@@ -4,10 +4,8 @@
     </p>
 
     <label for="serviceUrl">GeocodeServer URL: </label>
-    <input type="text" name="serviceUrl" value="${nls.serviceURL}"
+    <input type="text" name="serviceUrl" placeholder="${nls.placeholder}"
     data-dojo-type="dijit/form/TextBox"
     data-dojo-props="trim:true"
-    data-dojo-attach-point="serviceUrl">
-
-    <button data-dojo-attach-event="ondijitclick:setGeocoder">${nls.button}</button>
+    data-dojo-attach-point="serviceUrl" style="width:100%">
 </div>

@@ -1,7 +1,7 @@
 define({
   root: {
-    serviceURL : "https://navigator.state.or.us/ArcGIS/rest/services/Locators/gc_Composite/GeocodeServer",
     instuctions : "Enter you own Geocoding Service URL",
+    placeholder : "ex: http://.../arcgis/rest/services/.../geocodername/GeocodeServer",
     button : "SET"
   },
   "ar": false,

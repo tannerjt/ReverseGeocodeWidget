@@ -30,42 +30,23 @@ define([
     on) {
     return declare([BaseWidgetSetting, _WidgetsInTemplateMixin], {
       //these two properties is defined in the BaseWidget
-      baseClass: 'jimu-widget-scalebar-setting',
+      baseClass: 'jimu-widget-reversegeocode-setting',
 
       startup: function() {
         this.inherited(arguments);
-        if (!this.config.scalebar) {
-          this.config.scalebar = {};
+        if (!this.config.reversegeocode) {
+          this.config.revesegeocode = {};
         }
         this.setConfig(this.config);
-
-        this.own(on(this.selectUnit, "change", lang.hitch(this, this.onSelectChange)));
-        this.own(on(this.selectStype, "change", lang.hitch(this, this.onSelectChange)));
       },
 
       setConfig: function(config) {
         this.config = config;
-        if (config.scalebar.scalebarUnit) {
-          this.selectUnit.set('value', config.scalebar.scalebarUnit);
-        } else {
-          this.selectUnit.set('value', "english");
-        }
-        if (config.scalebar.scalebarStyle) {
-          this.selectStype.set('value', config.scalebar.scalebarStyle);
-        } else {
-          this.selectStype.set('value', "line");
-        }
-      },
-
-      onSelectChange: function() {
-        if (this.selectUnit.value === "dual") {
-          this.selectStype.set('value', "line");
-        }
+        //we may need to set something here
       },
 
       getConfig: function() {
-        this.config.scalebar.scalebarUnit = this.selectUnit.value;
-        this.config.scalebar.scalebarStyle = this.selectStype.value;
+        this.config.reversegeocode.serviceUrl = this.serviceUrl.value;
         return this.config;
       }
 
