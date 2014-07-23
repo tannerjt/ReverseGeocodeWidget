@@ -1,10 +1,40 @@
-<div style="width:100%;">
-  <div class="instruction">
-    <span class="instruction-inner">${nls.instruction}</span>
-  </div>
-  <div class="add-geocoder" data-dojo-attach-event="onclick: onAddGeocoderClick">
-    <span class="add-geocoder-icon"></span>
-    <span class="add-geocoder-label">${nls.add}</span>
-  </div>
-  <div data-dojo-attach-point="tableGeocoders"></div>
+<div style="width:100%;height:100%;">
+    <label for="serviceUrl">GeocodeServer URL</label>
+    <input type="text" name="serviceUrl" value="${nls.serviceURL}"
+    data-dojo-type="dijit/form/TextBox"
+    data-dojo-props="trim:true"
+    data-dojo-attach-point="serviceUrl">
+  <!--
+    <button data-dojo-attach-event="ondijitclick:setGeocoder">SET</button>
+    -->
+    <!--
+    <table class="settings-section">
+      <tbody>
+        <tr>
+          <td>${nls.unit}</td>
+          <td>
+            <div>
+              <input type="text" name="">             
+              <select style="margin-left: 10px;" data-dojo-attach-point="selectUnit" data-dojo-type="dijit/form/Select">
+                <option value="dual" selected="selected">dual</option>
+                <option value="english">english</option>
+                <option value="metric">metric</option>
+              </select>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>${nls.style}</td>
+          <td>
+            <div>             
+              <select style="margin-left: 10px;" data-dojo-attach-point="selectStype" data-dojo-type="dijit/form/Select">
+                <option value="line" selected="selected">line</option>
+                <option value="ruler">ruler</option>
+              </select>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    -->
 </div>

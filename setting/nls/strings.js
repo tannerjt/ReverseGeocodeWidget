@@ -1,19 +1,6 @@
 define({
   root: {
-    placeholder: "Placeholder Text",
-    url: "Geocoder URL",
-    name: "Geocoder Name",
-    singleLineFieldName: "SingleLineFieldName",
-    portalConnectionError: 'Can not get the configurations of geocoder from portal',
-    actions: "Actions",
-    warning: "Incorrect Service",
-    instruction: "Establish the geocoders that will be used in this widget. Click Add Geocoder to reference a URL, specify a user friendly name, and set other properties. " +
-    "You can also reorder, configure, or delete your geocoders below.",
-    add: "Add Geocoder",
-    edit: "Edit Geocoder",
-    ok: "OK",
-    cancel: "Cancel",
-    REPEATING_ERROR: "The following fields are repeated: "
+    serviceURL : "https://navigator.state.or.us/ArcGIS/rest/services/Locators/gc_Composite/GeocodeServer"
   },
   "ar": false,
   "cs": false,
@@ -39,5 +26,5 @@ define({
   "sv": false,
   "th": false,
   "tr": false,
-  "zh-cn": true
+  "zh-cn": false
 });
