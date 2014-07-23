@@ -34,7 +34,6 @@ define([
 
       startup: function() {
         this.inherited(arguments);
-        console.log('startup');
         if (!this.config.reversegeocode) {
           this.config.reversegeocode = {};
         }
@@ -42,7 +41,6 @@ define([
       },
 
       setConfig: function(config) {
-        console.log('set config');
         if(config.reversegeocode.serviceUrl) {
           this.serviceUrl.set('value', config.reversegeocode.serviceUrl)
         }
