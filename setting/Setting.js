@@ -34,20 +34,28 @@ define([
 
       startup: function() {
         this.inherited(arguments);
+        console.log('startup');
         if (!this.config.reversegeocode) {
-          this.config.revesegeocode = {};
+          this.config.reversegeocode = {};
         }
         this.setConfig(this.config);
       },
 
       setConfig: function(config) {
+        console.log('set config');
+        if(config.reversegeocode.serviceUrl) {
+          this.serviceUrl.set('value', config.reversegeocode.serviceUrl)
+        }
         this.config = config;
         //we may need to set something here
       },
 
+      //When user click's 'OK'
       getConfig: function() {
-        this.config.reversegeocode.serviceUrl = this.serviceUrl.value;
-        return this.config;
+        console.log('Get config');
+        this.serviceUrl.value = this.config.reversegeocode.serviceUrl;
+        //this.config.reversegeocode.serviceUrl = this.serviceUrl.value;
+        //return this.config;
       }
 
     });

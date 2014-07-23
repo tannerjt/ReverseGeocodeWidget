@@ -1,6 +1,6 @@
 define({
   root: {
-    instuctions : "Enter you own Geocoding Service URL",
+    instructions : "Enter you own Geocoding Service URL",
     placeholder : "ex: http://.../arcgis/rest/services/.../geocodername/GeocodeServer",
     button : "SET"
   },
