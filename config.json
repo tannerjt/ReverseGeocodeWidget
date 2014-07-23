@@ -1,9 +1,5 @@
 {
-  "geocoder": {
-    "autoComplete": true,
-    "minCharacters": 3,
-    "arcgisGeocoder": {
-      "placeholder": "Find address or place"
-    }
+  "reversegeocoder": {
+  	"serviceUrl" : "https://navigator.state.or.us/ArcGIS/rest/services/Locators/gc_Composite/GeocodeServer"
   }
 }
