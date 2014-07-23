@@ -15,9 +15,6 @@ function(declare, BaseWidget, lang, Locator, webMercatorUtils) {
 
     locator : undefined,
 
-    //Change this for your own geocoder if needed
-    serviceURL : "http://navigator.state.or.us/arcgis/rest/services/Locators/gc_Composite/GeocodeServer",
-
     startup : function () {
         this.inherited(arguments);
         this._initGeocoder();
@@ -32,7 +29,8 @@ function(declare, BaseWidget, lang, Locator, webMercatorUtils) {
     },
 
     _initGeocoder : function () {
-        this.locator = new Locator(this.serviceURL);
+
+        this.locator = new Locator(this.config.reversegeocode.serviceUrl);
         this.locator.on("location-to-address-complete", lang.hitch(this, function (evt) {
             var address = evt.address.address;
             this.geoResult.innerHTML = address.Address + ", " + address.City + ", " + address.State + address.Zip;

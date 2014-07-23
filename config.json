@@ -1,5 +1,5 @@
 {
   "reversegeocode": {
-  	"serviceUrl" : "https://navigator.state.or.us/ArcGIS/rest/services/Locators/gc_Composite/GeocodeServer"
+  	"serviceUrl" : "http://navigator.state.or.us/ArcGIS/rest/services/Locators/gc_Composite/GeocodeServer"
   }
 }
