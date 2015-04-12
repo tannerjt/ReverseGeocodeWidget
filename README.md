@@ -10,6 +10,7 @@ ESRI has released their Web App Builder for developers to BETA test.  One of the
 #Changes
 Feel free to make any improvements to this widget and I will take a look.  It's pretty simple right now, but works for a starter.
 
+#License 
 The MIT License (MIT)
 
 Copyright (c) 2014 Joshua Tanner
