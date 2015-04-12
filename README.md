@@ -5,7 +5,7 @@ ESRI has released their Web App Builder for developers to BETA test.  One of the
 1. Download this widget and place it into your widgets folder (client/stemapp/widgets)
 2. Add widget to your application and use builder to set new GeocodeServer URL
 
-##Service is currently set to an Oregon geocoder and will only work within the state.
+##Service is currently set to an Oregon geocoder and will only work with Oregon adresses.
 
 #Changes
 Feel free to make any improvements to this widget and I will take a look.  It's pretty simple right now, but works for a starter.
